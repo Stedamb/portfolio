@@ -21,14 +21,15 @@ import { site } from '@/data/site';
         <section>
           <h2 class="text-foreground mb-3 text-2xl font-semibold">How We Use Cookies</h2>
           <p>
-            This site uses <strong>Google Tag Manager (GTM)</strong> to manage analytics tags. GTM is
-            a cookie-less tag management system and does not set cookies by itself. However, the tags
-            it deploys — specifically <strong>Google Analytics 4</strong> — may set cookies for analytics
-            purposes.
+            This site uses <strong>Google Tag Manager (GTM)</strong> to manage analytics tags. GTM
+            is a cookie-less tag management system and does not set cookies by itself. However, the
+            tags it deploys — specifically <strong>Google Analytics 4</strong> — may set cookies for
+            analytics purposes.
           </p>
           <p class="mt-2">
-            GTM and GA4 <strong>only load after you explicitly accept</strong> cookies via the consent
-            banner. If you reject, no tracking scripts or analytics cookies are placed on your device.
+            GTM and GA4 <strong>only load after you explicitly accept</strong> cookies via the
+            consent banner. If you reject, no tracking scripts or analytics cookies are placed on
+            your device.
           </p>
         </section>
 
@@ -46,15 +47,19 @@ import { site } from '@/data/site';
               </thead>
               <tbody class="text-foreground/70">
                 <tr class="border-b border-white/12.5">
-                  <td class="py-2 pr-4"><code>cookie-consent</code></td>
+                  <td class="py-2 pr-4">
+                    <code>cookie-consent</code>
+                  </td>
                   <td class="py-2 pr-4">Functional</td>
-                  <td class="py-2 pr-4"
-                    >Stores your consent preference so the banner does not reappear</td
-                  >
+                  <td class="py-2 pr-4">
+                    Stores your consent preference so the banner does not reappear
+                  </td>
                   <td class="py-2">12 months</td>
                 </tr>
                 <tr>
-                  <td class="py-2 pr-4"><code>_ga</code>, <code>_ga_*</code></td>
+                  <td class="py-2 pr-4">
+                    <code>_ga</code>, <code>_ga_*</code>
+                  </td>
                   <td class="py-2 pr-4">Analytics</td>
                   <td class="py-2 pr-4">Google Analytics 4 — anonymous usage statistics</td>
                   <td class="py-2">Up to 26 months</td>
@@ -83,13 +88,15 @@ import { site } from '@/data/site';
               class="text-foreground underline-offset-4 hover:underline"
             >
               Privacy Policy
-            </a>. You can learn more about Google Analytics cookies at
+            </a>
+            . You can learn more about Google Analytics cookies at
             <a
               href="https://developers.google.com/analytics/devguides/collection/ga4/cookies"
               class="text-foreground underline-offset-4 hover:underline"
             >
               Google's Cookie Documentation
-            </a>.
+            </a>
+            .
           </p>
         </section>
 
@@ -97,9 +104,7 @@ import { site } from '@/data/site';
           <h2 class="text-foreground mb-3 text-2xl font-semibold">Contact</h2>
           <p>
             For questions about this cookie policy, reach out at
-            <a href={`mailto:${site.email}`}>
-              {site.email}
-            </a>.
+            <a href={`mailto:${site.email}`}>{site.email}</a>.
           </p>
         </section>
       </div>

@@ -40,9 +40,7 @@ import WavesSound from '@/components/blocks/WavesSound.astro';
         />
       </h2>
       <AnimatedButtons />
-      <div
-        class="hover:text-primary absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white transition-colors"
-      >
+      <div class="hover:text-primary absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white transition-colors">
         <a href="#tech" class="scroll-to-link" aria-label="Scroll to About section">
           <ArrowDown size={24} />
         </a>
@@ -72,14 +70,4 @@ import WavesSound from '@/components/blocks/WavesSound.astro';
     },
     { passive: true }
   );
-
-  document.querySelectorAll<HTMLAnchorElement>('.scroll-to-link').forEach((el) => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const href = el.getAttribute('href');
-      if (href?.startsWith('#')) {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
 </script>

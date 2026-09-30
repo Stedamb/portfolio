@@ -13,18 +13,16 @@ const navRoutes = isHome ? routes : [{ name: 'Home', href: '/' }];
 
   {/* Desktop Menu */}
   <div class="hidden justify-center gap-4 p-6 lg:flex">
-    {
-      navRoutes.map((route) => (
-        <Button
-          variant="link"
-          size="sm"
-          class="nav-scroll-to px-2 text-2xl opacity-90"
-          href={isHome || route.href.startsWith('/') ? route.href : '/' + route.href}
-        >
-          {route.name}
-        </Button>
-      ))
-    }
+    {navRoutes.map((route) => (
+      <Button
+        variant="link"
+        size="sm"
+        class="nav-scroll-to px-2 text-2xl opacity-90"
+        href={isHome || route.href.startsWith('/') ? route.href : '/' + route.href}
+      >
+        {route.name}
+      </Button>
+    ))}
   </div>
 </div>
 
@@ -74,14 +72,5 @@ const navRoutes = isHome ? routes : [{ name: 'Home', href: '/' }];
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    document.querySelectorAll('.nav-scroll-to').forEach((el) => {
-      el.addEventListener('click', (e) => {
-        const href = el.getAttribute('href');
-        if (!href?.startsWith('#')) return;
-        e.preventDefault();
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
   });
 </script>

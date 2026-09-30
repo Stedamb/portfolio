@@ -5,11 +5,9 @@ const chars = Array.from(text);
 
 <div class="overflow-hidden">
   <div class={className} data-animated-text data-base-delay={delay}>
-    {
-      chars.map((char, i) => (
-        <span style={`--delay: ${delay + i * 0.08}s`}>{char === ' ' ? '\u00A0' : char}</span>
-      ))
-    }
+    {chars.map((char, i) => (
+      <span style={`--delay: ${delay + i * 0.08}s`}>{char === ' ' ? '\u00A0' : char}</span>
+    ))}
   </div>
 </div>
 

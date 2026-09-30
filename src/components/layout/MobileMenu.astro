@@ -5,7 +5,7 @@ const isHome = Astro.url.pathname === '/';
 const navRoutes = isHome ? routes : [{ name: 'Home', href: '/' }];
 ---
 
-<div class="lg:hidden" id="mobile-menu">
+<div class="lg:hidden" id="mobile-menu" data-lenis-prevent>
   <button
     id="menu-toggle"
     class="text-foreground hover:text-muted-foreground relative z-50 p-4 opacity-75 transition-transform focus:outline-hidden active:scale-95"
@@ -35,25 +35,23 @@ const navRoutes = isHome ? routes : [{ name: 'Home', href: '/' }];
   >
     <div class="flex min-h-screen flex-col items-center justify-center">
       <nav id="menu-nav" class="flex flex-col items-center gap-12 py-8">
-        {
-          navRoutes.map((item, i) => (
-            <a
-              href={isHome || item.href.startsWith('/') ? item.href : '/' + item.href}
-              class="menu-link group relative font-serif text-2xl italic"
-            >
-              <div class="overflow-hidden">
-                <span class="menu-word" data-item={i}>
-                  {Array.from(item.name).map((char, j) => (
-                    <span class="menu-char" style={`--delay: ${i * 0.12 + j * 0.04}s`}>
-                      {char === ' ' ? '\u00A0' : char}
-                    </span>
-                  ))}
-                </span>
-              </div>
-              <span class="from-primary to-primary/50 absolute -bottom-2 left-0 h-0.5 w-0 bg-linear-to-r transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))
-        }
+        {navRoutes.map((item, i) => (
+          <a
+            href={isHome || item.href.startsWith('/') ? item.href : '/' + item.href}
+            class="menu-link group relative font-serif text-2xl italic"
+          >
+            <div class="overflow-hidden">
+              <span class="menu-word" data-item={i}>
+                {Array.from(item.name).map((char, j) => (
+                  <span class="menu-char" style={`--delay: ${i * 0.12 + j * 0.04}s`}>
+                    {char === ' ' ? '\u00A0' : char}
+                  </span>
+                ))}
+              </span>
+            </div>
+            <span class="from-primary to-primary/50 absolute -bottom-2 left-0 h-0.5 w-0 bg-linear-to-r transition-all duration-300 group-hover:w-full" />
+          </a>
+        ))}
       </nav>
     </div>
   </div>

@@ -6,6 +6,7 @@ import CookieConsent from '@/components/seo/CookieConsent.astro';
 import { ClientRouter } from 'astro:transitions';
 import { Toaster } from '@/components/ui/toaster';
 import { site, socialLinks } from '@/data/site';
+import 'lenis/dist/lenis.css';
 import '@/styles/globals.css';
 
 interface Props {
@@ -102,16 +103,14 @@ const webPageSchema = {
     <meta name="google-site-verification" content="O1CJVpBGxZrGOeVbeQ-spnPWxLJPx7lZ0-19ekTldi0" />
 
     <!-- Structured Data (JSON-LD) -->
-    {
-      pageType === 'home' ? (
-        <>
-          <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
-          <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
-        </>
-      ) : (
-        <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
-      )
-    }
+    {pageType === 'home' ? (
+      <>
+        <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
+        <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+      </>
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+    )}
 
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -132,5 +131,62 @@ const webPageSchema = {
     </main>
     <Footer />
     <Toaster client:idle />
+
+    <script>
+      import Lenis from 'lenis';
+
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let lenis: Lenis | undefined;
+
+      if (!reducedMotion.matches) {
+        lenis = new Lenis({ autoRaf: true });
+
+        // Stop any inertia before Astro swaps the DOM, then re-sync with the
+        // scroll position Astro restored on the incoming page.
+        document.addEventListener('astro:before-swap', () => {
+          lenis?.scrollTo(window.scrollY, { immediate: true });
+        });
+        document.addEventListener('astro:after-swap', () => {
+          if (!lenis) return;
+          lenis.resize();
+          // Astro rewrites <html> attributes during the swap, which drops
+          // Lenis's state class. `before-swap` syncs the target to the restored
+          // position, so the class Lenis would render at idle is just `lenis`.
+          document.documentElement.classList.add('lenis');
+        });
+      }
+
+      // Capture phase so this runs before the ClientRouter's own click handler.
+      document.addEventListener(
+        'click',
+        (event) => {
+          if (
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+          ) {
+            return;
+          }
+          if (!(event.target instanceof Element)) return;
+
+          const link = event.target.closest('a[href^="#"]');
+          if (!(link instanceof HTMLAnchorElement)) return;
+
+          const hash = link.getAttribute('href');
+          const target = hash && hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+          if (!target) return;
+
+          event.preventDefault();
+          if (lenis) {
+            lenis.scrollTo(target);
+          } else {
+            target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+          }
+        },
+        true
+      );
+    </script>
   </body>
 </html>

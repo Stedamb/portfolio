@@ -4,11 +4,12 @@ import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title="404 - Page Not Found" pageType="error">
-  <section
-    class="flex min-h-svh flex-col items-center justify-center bg-[radial-gradient(at_47%_33%,hsl(0,0%,80%)_0,transparent_49%)] opacity-80"
-  >
+  <section class="flex min-h-svh flex-col items-center justify-center bg-[radial-gradient(at_47%_33%,hsl(0,0%,80%)_0,transparent_49%)] opacity-80">
     <h1 class="font-serif text-8xl italic">404</h1>
     <p class="text-foreground/70 mt-4">Page not found</p>
-    <Button variant="glass" href="/" class="mt-8"> Go back home </Button>
+    <Button variant="glass" href="/" class="mt-8">
+      {' '}
+      Go back home{' '}
+    </Button>
   </section>
 </Layout>

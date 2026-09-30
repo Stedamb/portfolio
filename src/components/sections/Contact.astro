@@ -1,5 +1,4 @@
 ---
-import { Github, Linkedin } from 'lucide-react';
 import Card from '@/components/ui/card.astro';
 import ContactForm from '../react/ContactForm';
 import { socialLinks } from '@/data/site';
@@ -8,10 +7,7 @@ import { socialLinks } from '@/data/site';
 <section id="contact" class="relative overflow-hidden py-20">
   <!-- Background gradients -->
   <div class="bg-background absolute inset-0">
-    <div
-      class="absolute inset-0 bg-[radial-gradient(at_47%_33%,hsl(0,0%,100%)_0,transparent_59%)] opacity-10"
-    >
-    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(at_47%_33%,hsl(0,0%,100%)_0,transparent_59%)] opacity-10"></div>
   </div>
 
   <div class="relative mx-auto max-w-6xl px-4">
@@ -19,9 +15,7 @@ import { socialLinks } from '@/data/site';
       Get In Touch
     </h2>
     <div class="flex flex-col items-center justify-center gap-4">
-      <div
-        class="grid w-full grid-cols-1 gap-2 rounded-xl border border-white/12.5 bg-black/20 p-2 md:grid-cols-2 lg:gap-4 lg:p-4"
-      >
+      <div class="grid w-full grid-cols-1 gap-2 rounded-xl border border-white/12.5 bg-black/20 p-2 md:grid-cols-2 lg:gap-4 lg:p-4">
         <!-- Contact Form Card -->
         <Card color="blue" class="p-6 md:row-span-2">
           <div class="flex h-full flex-col justify-between gap-6">
@@ -62,7 +56,12 @@ import { socialLinks } from '@/data/site';
                 rel="noopener noreferrer"
                 class="group/bento relative flex flex-col items-center justify-center gap-2 rounded-lg border border-white/12.5 bg-white/5 bg-linear-to-br from-zinc-500/10 to-zinc-800/10 p-4 transition-colors duration-200 hover:border-zinc-400 hover:bg-white/10"
               >
-                <Github className="h-8 w-8 transition-transform group-hover/bento:scale-110" />
+                <svg
+                  class="h-8 w-8 transition-transform group-hover/bento:scale-110"
+                  aria-hidden="true"
+                >
+                  <use href="/icons/icons.svg#github"></use>
+                </svg>
                 <span class="font-medium">GitHub</span>
               </a>
               <a
@@ -71,7 +70,12 @@ import { socialLinks } from '@/data/site';
                 rel="noopener noreferrer"
                 class="group/bento relative flex flex-col items-center justify-center gap-2 rounded-lg border border-white/12.5 bg-white/5 bg-linear-to-br from-blue-500/10 to-cyan-500/10 p-4 transition-colors duration-200 hover:border-cyan-600 hover:bg-white/10"
               >
-                <Linkedin className="h-8 w-8 transition-transform group-hover/bento:scale-110" />
+                <svg
+                  class="h-8 w-8 transition-transform group-hover/bento:scale-110"
+                  aria-hidden="true"
+                >
+                  <use href="/icons/icons.svg#linkedin"></use>
+                </svg>
                 <span class="font-medium">LinkedIn</span>
               </a>
             </div>

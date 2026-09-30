@@ -34,56 +34,49 @@ const technologies = [
 <section id="tech" class="relative overflow-hidden py-20">
   <!-- Background gradients -->
   <div class="bg-background absolute inset-0">
-    <div
-      class="absolute inset-0 bg-[radial-gradient(at_47%_33%,hsl(0,0%,100%)_0,transparent_59%)] opacity-10"
-    >
-    </div>
+    <div class="absolute inset-0 bg-[radial-gradient(at_47%_33%,hsl(0,0%,100%)_0,transparent_59%)] opacity-10"></div>
   </div>
 
   <div class="relative mx-auto max-w-3xl px-4">
     <h2 class="mb-8 text-center font-serif text-3xl font-normal italic md:text-4xl">Tech I Use</h2>
     <div class="flex flex-col items-center justify-center gap-4">
-      <div
-        class="grid grid-cols-2 gap-2 rounded-xl border border-white/12.5 bg-black/20 p-2 lg:gap-4 lg:p-4"
-      >
-        {
-          technologies.map((tech) => (
-            <div
-              class={`group relative overflow-hidden rounded-lg p-6 backdrop-blur-xs transition-all duration-300 ${tech.name === '⚛️ React' ? 'col-span-2' : ''} ${tech.gradient} cursor-pointer border border-white/12.5 bg-white/5 hover:bg-white/10 ${tech.border} `}
-            >
-              <div class="flex items-center justify-between">
-                <div class="flex flex-col transition-opacity duration-300 lg:group-hover:opacity-100">
-                  <h3 class="mb-2 text-xl font-semibold transition-colors duration-300">
-                    <Fragment set:html={tech.name} />
-                  </h3>
-                  <p class="text-foreground lg:text-muted-foreground/80 text-sm">
-                    {tech.description}
-                  </p>
-                </div>
-                <div class="-z-10 lg:relative lg:h-[100px] lg:w-[200px] lg:overflow-hidden">
-                  <img
-                    src={tech.outline}
-                    alt={`${tech.shortName} logo outline`}
-                    title={`${tech.shortName} logo`}
-                    loading="lazy"
-                    width="200"
-                    height="100"
-                    class="absolute inset-0 h-full w-full scale-150 transform object-contain opacity-0 transition-opacity duration-300 lg:opacity-100 lg:group-hover:opacity-0"
-                  />
-                  <img
-                    src={tech.filled}
-                    alt={`${tech.shortName} logo`}
-                    title={`${tech.shortName} logo`}
-                    loading="lazy"
-                    width="200"
-                    height="100"
-                    class="absolute inset-0 h-full w-full scale-150 transform object-contain opacity-10 transition-opacity duration-300 group-hover:opacity-20 lg:opacity-0 lg:group-hover:opacity-100"
-                  />
-                </div>
+      <div class="grid grid-cols-2 gap-2 rounded-xl border border-white/12.5 bg-black/20 p-2 lg:gap-4 lg:p-4">
+        {technologies.map((tech) => (
+          <div
+            class={`group relative overflow-hidden rounded-lg p-6 backdrop-blur-xs transition-all duration-300 ${tech.name === '⚛️ React' ? 'col-span-2' : ''} ${tech.gradient} cursor-pointer border border-white/12.5 bg-white/5 hover:bg-white/10 ${tech.border} `}
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col transition-opacity duration-300 lg:group-hover:opacity-100">
+                <h3 class="mb-2 text-xl font-semibold transition-colors duration-300">
+                  <Fragment set:html={tech.name} />
+                </h3>
+                <p class="text-foreground lg:text-muted-foreground/80 text-sm">
+                  {tech.description}
+                </p>
+              </div>
+              <div class="-z-10 lg:relative lg:h-[100px] lg:w-[200px] lg:overflow-hidden">
+                <img
+                  src={tech.outline}
+                  alt={`${tech.shortName} logo outline`}
+                  title={`${tech.shortName} logo`}
+                  loading="lazy"
+                  width="200"
+                  height="100"
+                  class="absolute inset-0 h-full w-full scale-150 transform object-contain opacity-0 transition-opacity duration-300 lg:opacity-100 lg:group-hover:opacity-0"
+                />
+                <img
+                  src={tech.filled}
+                  alt={`${tech.shortName} logo`}
+                  title={`${tech.shortName} logo`}
+                  loading="lazy"
+                  width="200"
+                  height="100"
+                  class="absolute inset-0 h-full w-full scale-150 transform object-contain opacity-10 transition-opacity duration-300 group-hover:opacity-20 lg:opacity-0 lg:group-hover:opacity-100"
+                />
               </div>
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
     </div>
   </div>

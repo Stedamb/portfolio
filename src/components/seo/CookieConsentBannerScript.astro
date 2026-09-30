@@ -1,7 +1,9 @@
 ---
 // Rendered only when no consent cookie is set. Kept in its own component because
-// a multi-statement <script> nested inside an Astro `{cond && (...)}` expression
+// a multi-statement inline script nested inside an Astro `{cond && (...)}` expression
 // is parsed as JSX children, which prettier cannot parse.
+// Avoid writing the literal script tag opener in this comment: Vite's dependency
+// scanner matches raw tag text inside .astro files and would misread the comment.
 ---
 
 <script is:inline>
