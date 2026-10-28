@@ -4,24 +4,24 @@ import ContactForm from '../react/ContactForm';
 import { socialLinks } from '@/data/site';
 ---
 
-<section id="contact" class="relative overflow-hidden py-20">
+<section id="contact" class="relative py-20 overflow-hidden">
   <!-- Background gradients -->
-  <div class="bg-background absolute inset-0">
+  <div class="absolute inset-0 bg-background">
     <div class="absolute inset-0 bg-[radial-gradient(at_47%_33%,hsl(0,0%,100%)_0,transparent_59%)] opacity-10"></div>
   </div>
 
-  <div class="relative mx-auto max-w-6xl px-4">
-    <h2 class="mb-8 text-center font-serif text-3xl font-normal italic md:text-4xl">
+  <div class="relative max-w-6xl px-4 mx-auto">
+    <h2 class="mb-8 font-serif text-3xl italic font-normal text-center md:text-4xl">
       Get In Touch
     </h2>
     <div class="flex flex-col items-center justify-center gap-4">
       <div class="grid w-full grid-cols-1 gap-2 rounded-xl border border-white/12.5 bg-black/20 p-2 md:grid-cols-2 lg:gap-4 lg:p-4">
         <!-- Contact Form Card -->
         <Card color="blue" class="p-6 md:row-span-2">
-          <div class="flex h-full flex-col justify-between gap-6">
+          <div class="flex flex-col justify-between h-full gap-6">
             <div>
               <h3 class="mb-4 text-xl font-semibold">Send Me a Message</h3>
-              <p class="text-muted-foreground mb-4">
+              <p class="mb-4 text-muted-foreground">
                 Feel free to reach out if you'd like to work together!
               </p>
             </div>
@@ -30,24 +30,40 @@ import { socialLinks } from '@/data/site';
         </Card>
 
         <!-- Map Card -->
-        <Card color="pink" class="cursor-pointer">
+        <Card color="pink" class="overflow-hidden cursor-pointer">
           <img
-            src="/icons/map.svg"
-            alt="Map showing location"
+            src="/assets/germany.svg"
+            alt="Map of Germany with Berlin marked"
             title="Location map"
             loading="lazy"
             width="400"
             height="300"
-            class="h-full w-full object-cover mix-blend-color-dodge"
+            class="object-cover w-full h-full mix-blend-overlay"
           />
+          <!-- Mirrors the img's object-cover box so the pin stays on Berlin at any card ratio -->
+          <div
+            class="pointer-events-none absolute inset-0 [container-type:size]"
+            aria-hidden="true"
+          >
+            <div class="absolute top-1/2 left-1/2 h-[max(100cqh,75cqw)] w-[max(100cqw,133.3333cqh)] -translate-x-1/2 -translate-y-1/2">
+              <!-- Berlin's center in the SVG's viewBox: 75% / 50% -->
+              <div class="absolute top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2">
+                <span class="absolute inset-0 rounded-full bg-pink-400 opacity-75 motion-safe:animate-ping"></span>
+                <span class="relative block size-3 rounded-full bg-pink-400 shadow-[0_0_12px_4px] shadow-pink-500/60 ring-2 ring-white"></span>
+                <span class="absolute top-1/2 right-full mr-3 -translate-y-1/2 text-lg font-semibold whitespace-nowrap text-white drop-shadow-md">
+                  Berlin
+                </span>
+              </div>
+            </div>
+          </div>
         </Card>
 
         <!-- Social Links Card -->
         <Card color="green" class="p-6">
-          <div class="flex h-full flex-col justify-between">
+          <div class="flex flex-col justify-between h-full">
             <div>
               <h3 class="mb-4 text-xl font-semibold">Social Links</h3>
-              <p class="text-muted-foreground mb-6">Connect with me on social media</p>
+              <p class="mb-6 text-muted-foreground">Connect with me on social media</p>
             </div>
             <div class="grid grid-cols-2 gap-4">
               <a
@@ -57,7 +73,7 @@ import { socialLinks } from '@/data/site';
                 class="group/bento relative flex flex-col items-center justify-center gap-2 rounded-lg border border-white/12.5 bg-white/5 bg-linear-to-br from-zinc-500/10 to-zinc-800/10 p-4 transition-colors duration-200 hover:border-zinc-400 hover:bg-white/10"
               >
                 <svg
-                  class="h-8 w-8 transition-transform group-hover/bento:scale-110"
+                  class="w-8 h-8 transition-transform group-hover/bento:scale-110"
                   aria-hidden="true"
                 >
                   <use href="/icons/icons.svg#github"></use>
@@ -71,7 +87,7 @@ import { socialLinks } from '@/data/site';
                 class="group/bento relative flex flex-col items-center justify-center gap-2 rounded-lg border border-white/12.5 bg-white/5 bg-linear-to-br from-blue-500/10 to-cyan-500/10 p-4 transition-colors duration-200 hover:border-cyan-600 hover:bg-white/10"
               >
                 <svg
-                  class="h-8 w-8 transition-transform group-hover/bento:scale-110"
+                  class="w-8 h-8 transition-transform group-hover/bento:scale-110"
                   aria-hidden="true"
                 >
                   <use href="/icons/icons.svg#linkedin"></use>
