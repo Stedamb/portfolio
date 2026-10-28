@@ -3,7 +3,7 @@ export const site = {
   title: "Stefano D'Ambrosio - Portfolio",
   description:
     "Portfolio website featuring projects, technologies, and contact information for Stefano D'Ambrosio.",
-  url: 'https://www.stedamb.it',
+  url: 'https://www.stedamb.dev',
   image: '/assets/og-image.png',
   email: 'stedamb@gmail.com',
   twitter: '@stedamb',

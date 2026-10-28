@@ -32,6 +32,6 @@ Astro, React, TypeScript, Tailwind CSS, Motion, Node.js, Next.js, Supabase
 
 ## Pages
 
-- [Home](https://www.stedamb.it)
-- [Privacy Policy](https://www.stedamb.it/privacy-policy)
-- [Cookie Policy](https://www.stedamb.it/cookie-policy)
+- [Home](https://www.stedamb.dev)
+- [Privacy Policy](https://www.stedamb.dev/privacy-policy)
+- [Cookie Policy](https://www.stedamb.dev/cookie-policy)

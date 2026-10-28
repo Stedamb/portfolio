@@ -8,7 +8,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.stedamb.it',
+  site: 'https://www.stedamb.dev',
+  trailingSlash: 'never',
   output: 'server',
   adapter: vercel({ imageService: true }),
 

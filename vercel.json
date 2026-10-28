@@ -11,7 +11,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'self' https://stedamb.it https://www.stedamb.it https://*.vercel.app http://localhost:4321"
+          "value": "frame-ancestors 'self' https://stedamb.dev https://www.stedamb.dev https://*.vercel.app http://localhost:4321"
         },
         {
           "key": "X-XSS-Protection",
