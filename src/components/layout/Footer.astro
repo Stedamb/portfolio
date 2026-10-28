@@ -1,24 +1,12 @@
 ---
-import { site, socialLinks } from '@/data/site';
+import { site } from '@/data/site';
 ---
 
 <div class="border-t border-white/12.5">
   <div class="relative mx-auto max-w-6xl px-4">
     <div class="flex flex-col items-center justify-between gap-4 py-4 md:flex-row">
       <span class="text-muted-foreground text-xs opacity-90">
-        Made with
-        <span role="img" aria-label="heart">
-          ❤️
-        </span>
-        by
-        <a
-          class="text-muted-foreground font-serif font-normal italic"
-          href={socialLinks.github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {site.name}
-        </a>
+        Made with <span role="img" aria-label="heart">❤️</span> by <span class="font-serif italic">{site.name}</span>
       </span>
       <div class="text-muted-foreground flex items-center gap-2 text-xs">
         <a href="/privacy-policy" class="hover:text-foreground underline-offset-4 hover:underline">
