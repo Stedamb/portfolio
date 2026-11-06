@@ -1,68 +1,65 @@
-# Modern Astro App Template
+# Portfolio
 
-## Tech
+Personal portfolio of Stefano D'Ambrosio, front-end developer based in Berlin.
 
-- 🚀 Built with [Astro.js](https://astro.build)
-- 💅 Styled with [Tailwind CSS](https://tailwindcss.com)
-- 🎨 Modern UI components with shadcn/ui
-- 🌙 Dark mode support
-- 📱 Fully responsive design
+**Live:** [stedamb.dev](https://www.stedamb.dev)
 
-## Getting Started
+## Features
 
-### Prerequisites
+- Single-page portfolio with project showcase, smooth scrolling (Lenis) and carousels (Embla)
+- Contact form validated with React Hook Form and Zod, delivered through a serverless endpoint using [Resend](https://resend.com)
+- SEO essentials: sitemap, structured metadata, privacy and cookie policy pages
+- Accessible UI components built on Radix primitives
 
-- Node.js 18 or later
-- npm or pnpm
+## Tech stack
 
-### Installation
+| Area      | Tooling                                  |
+| --------- | ---------------------------------------- |
+| Framework | Astro 7 with the Vercel adapter          |
+| UI        | React 19 islands, Radix UI, Lucide icons |
+| Styling   | Tailwind CSS 4                           |
+| Forms     | React Hook Form, Zod                     |
+| Email     | Resend                                   |
+| Packages  | pnpm                                     |
 
-1. Clone the repository:
+## Getting started
+
+Requires Node.js 22 or later and [pnpm](https://pnpm.io).
 
 ```bash
-git clone <your-repo-url>
-cd astro-app
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
 pnpm install
-```
-
-3. Start the development server:
-
-```bash
-npm run dev
-# or
+cp .env.example .env   # add your Resend key and recipient address
 pnpm dev
 ```
 
-The app will be available at `http://localhost:4321`
+The dev server runs at <http://localhost:4321>.
 
-## Project Structure
+### Environment variables
 
+| Name             | Purpose                                     |
+| ---------------- | ------------------------------------------- |
+| `RESEND_API_KEY` | Resend API key used by `/api/contact`       |
+| `CONTACT_EMAIL`  | Address that receives contact form messages |
+
+## Scripts
+
+| Command        | Description                                          |
+| -------------- | ---------------------------------------------------- |
+| `pnpm dev`     | Start the dev server                                 |
+| `pnpm build`   | Type-check with `astro check`, then build for Vercel |
+| `pnpm preview` | Preview the production build                         |
+| `pnpm format`  | Format the codebase with Prettier                    |
+
+## Project structure
+
+```text
+src/
+├── components/   # Layout, sections, blocks, SEO and UI components
+├── data/         # Site config, projects and routes
+├── pages/        # Home, policies, sitemap and the /api/contact endpoint
+└── styles/       # Global styles and Tailwind theme
 ```
-astro-app/
-├── src/
-│   ├── components/     # UI components
-│   ├── layouts/        # Page layouts
-│   ├── pages/          # Route pages
-│   ├── styles/         # Global styles
-│   └── lib/           # Utility functions
-├── public/            # Static assets
-└── package.json
-```
-
-## Built With
-
-- [Astro](https://astro.build) - The web framework
-- [React](https://reactjs.org) - For interactive components
-- [Tailwind CSS](https://tailwindcss.com) - For styling
-- [shadcn/ui](https://ui.shadcn.com) - UI component library
 
 ## License
 
-This project is licensed under the MIT License.
+Code is released under the [MIT License](LICENSE). Text, images and other content are © Stefano D'Ambrosio and are not covered by the license.
