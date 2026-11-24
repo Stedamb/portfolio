@@ -31,10 +31,10 @@
 - **Videomaker Portfolio**: video-focused portfolio and travel journal. Astro, React islands, View Transitions.
   - Live: [videomaker-psi.vercel.app](https://videomaker-psi.vercel.app)
   - Source: [github.com/Stedamb/videomaker-portfolio](https://github.com/Stedamb/videomaker-portfolio)
-- **Minimal Portfolio**: photography portfolio with Payload CMS, live preview and a WebGL ASCII hero. Astro, Payload, Next.js, Postgres.
+- **Brut-folio**: photography portfolio with Payload CMS, live preview and a WebGL ASCII hero. Astro, Payload, Next.js, Postgres.
   - CMS admin: [minimal-portfolio-cms.vercel.app/admin](https://minimal-portfolio-cms.vercel.app/admin)
   - Live: [brut-folio.vercel.app](https://brut-folio.vercel.app)
-  - Source: [github.com/Stedamb/minimal-portfolio](https://github.com/Stedamb/minimal-portfolio)
+  - Source: [github.com/Stedamb/brut-folio](https://github.com/Stedamb/brut-folio)
 - **Journal**: personal journal of short essays, written in Markdown. Astro, Tailwind CSS.
   - Live: [personal-journal-chi.vercel.app](https://personal-journal-chi.vercel.app)
   - Source: [github.com/Stedamb/journal](https://github.com/Stedamb/journal)
