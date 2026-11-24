@@ -1,34 +1,51 @@
 # Stefano D'Ambrosio — Portfolio
 
-> Front End Developer building modern web experiences.
+> Front-end developer based in Berlin. Builds fast, content-driven websites and web apps with Astro, React and TypeScript, from design to deployment.
 
 ## About
 
-Full-stack developer specializing in Astro, React, TypeScript, and modern web technologies. Based in Italy, working freelance.
+- Role: Front-end developer, currently at BRG
+- Location: Berlin, Germany
+- Education: Degree in Computer Science, University of Bologna
+- Focus: Astro, React, TypeScript, Tailwind CSS, headless CMS (Sanity), Supabase
+- Also: graphic design, photography and videomaking
+- CV: [CV_Stefano_DAmbrosio.pdf](https://www.stedamb.dev/data/CV_Stefano_DAmbrosio.pdf)
 
 ## Links
 
 - [GitHub](https://github.com/Stedamb)
-- [LinkedIn](https://linkedin.com/in/ste-damb)
+- [LinkedIn](https://www.linkedin.com/in/ste-damb/)
 - [Email](mailto:stedamb@gmail.com)
 
 ## Projects
 
-- **BigBenchApp** — Web application for tracking progress in the Big Bench project, built with Next.js and Supabase.
-  - Demo: [big-bench-app.vercel.app](https://big-bench-app.vercel.app)
-  - Source: [GitHub](https://github.com/Stedamb/BigBenchApp)
+- **Big Bench App**: map, passport and guestbook for the 450+ Big Benches across Italy and Europe. React, Vite, Supabase, Leaflet, Capacitor.
+  - Live: [big-bench-app.vercel.app](https://big-bench-app.vercel.app)
+  - Source: [github.com/Stedamb/big-bench-app](https://github.com/Stedamb/big-bench-app)
+- **Portfolio**: this site, with a serverless contact form. Astro, React, Tailwind CSS, Resend.
+  - Live: [stedamb.dev](https://www.stedamb.dev)
+  - Source: [github.com/Stedamb/portfolio](https://github.com/Stedamb/portfolio)
+- **AnimaNoire**: website for a tattoo studio in Rimini, with content managed in a CMS. Astro, Sanity.
+  - Live: [anima-noire.vercel.app](https://anima-noire.vercel.app)
+  - Source: [github.com/Stedamb/animanoire](https://github.com/Stedamb/animanoire)
+- **Videomaker Portfolio**: video-focused portfolio and travel journal. Astro, React islands, View Transitions.
+  - Live: [videomaker-psi.vercel.app](https://videomaker-psi.vercel.app)
+  - Source: [github.com/Stedamb/videomaker-portfolio](https://github.com/Stedamb/videomaker-portfolio)
+- **Minimal Portfolio**: framework-free portfolio template for visual artists, video-first. Astro, Tailwind CSS.
+  - Live: [videomaker-v2.vercel.app](https://videomaker-v2.vercel.app)
+  - Source: [github.com/Stedamb/minimal-portfolio](https://github.com/Stedamb/minimal-portfolio)
+- **Journal**: personal journal of short essays, written in Markdown. Astro, Tailwind CSS.
+  - Live: [personal-journal-chi.vercel.app](https://personal-journal-chi.vercel.app)
+  - Source: [github.com/Stedamb/journal](https://github.com/Stedamb/journal)
 
-- **Da Lenin Barber Shop** — Website for a barber shop built with Astro.
-  - Demo: [daleninbarbershop.it](https://www.daleninbarbershop.it)
-  - Source: [GitHub](https://github.com/Stedamb/DaLeninBarberShop)
+## Client work
 
-- **Video Portfolio** — Video portfolio built with Astro.
-  - Demo: [video-journal.vercel.app](https://video-journal.vercel.app)
-  - Source: [GitHub](https://github.com/Stedamb/Videomaker-portfolio/tree/dev)
+- **LuxCoin**: showcase of an ancient coin collection. Next.js, Sanity. [luxcoin.it](https://www.luxcoin.it)
+- **Da Lenin Barber Shop**: website for a local barber shop. Astro. [daleninbarbershop.it](https://www.daleninbarbershop.it)
 
-## Tech Stack
+## Tech stack
 
-Astro, React, TypeScript, Tailwind CSS, Motion, Node.js, Next.js, Supabase
+TypeScript, Astro, React, Next.js, Tailwind CSS, Motion, Supabase, Sanity, Node.js, Figma
 
 ## Pages
 

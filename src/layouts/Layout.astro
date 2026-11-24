@@ -44,8 +44,17 @@ const personSchema = {
   jobTitle: 'Front End Developer',
   worksFor: {
     '@type': 'Organization',
-    name: 'Freelance',
+    name: 'BRG',
   },
+  homeLocation: {
+    '@type': 'Place',
+    name: 'Berlin, Germany',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'University of Bologna',
+  },
+  knowsAbout: ['Astro', 'React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Supabase', 'Sanity'],
   description: site.description,
   email: site.email,
 };
