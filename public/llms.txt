@@ -32,7 +32,7 @@
   - Live: [videomaker-psi.vercel.app](https://videomaker-psi.vercel.app)
   - Source: [github.com/Stedamb/videomaker-portfolio](https://github.com/Stedamb/videomaker-portfolio)
 - **Minimal Portfolio**: framework-free portfolio template for visual artists, video-first. Astro, Tailwind CSS.
-  - Live: [videomaker-v2.vercel.app](https://videomaker-v2.vercel.app)
+  - Live: [brut-folio.vercel.app](https://brut-folio.vercel.app)
   - Source: [github.com/Stedamb/minimal-portfolio](https://github.com/Stedamb/minimal-portfolio)
 - **Journal**: personal journal of short essays, written in Markdown. Astro, Tailwind CSS.
   - Live: [personal-journal-chi.vercel.app](https://personal-journal-chi.vercel.app)
